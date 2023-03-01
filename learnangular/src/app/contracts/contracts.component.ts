@@ -24,7 +24,7 @@ export interface FlatTreeNode {
 @Component({
   selector: 'app-contracts',
   templateUrl: './contracts.component.html',
-  styleUrls: ['./contracts.component.css']
+  styleUrls: ['./contracts.component.scss']
 })
 export class ContractsComponent {
 
