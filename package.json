@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backend-server": "json-server --watch db.json --port 8600"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@angular/cli": "^15.2.0"
+    "@angular/cli": "^15.2.0",
+    "json-server": "^0.17.2"
   }
 }
