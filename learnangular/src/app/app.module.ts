@@ -7,11 +7,16 @@ import {MaterialModule} from "./material.module";
 import {NavigationComponent} from "./navigation/navigation.component";
 import {ContactComponent} from "./contact/contact.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {ContactsComponent} from "./contacts/contacts.component";
+import {OverviewComponent} from "./overview/overview.component";
 
 @NgModule({
   declarations: [
     NavigationComponent,
-    ContactComponent
+    ContactComponent,
+    ContactComponent,
+    ContactsComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
