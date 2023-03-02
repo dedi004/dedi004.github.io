@@ -1,5 +1,4 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy Learn Angular project
 
 on:
   # Runs on pushes targeting the default branch
@@ -22,21 +21,33 @@ concurrency:
 
 jobs:
   # Build job
-  build:
+  build-and-deploy-angular:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Set up node.js
+          uses: actions/setup-node@v3.3.0
+          with:
+            node-version: '16'
+            cache: 'npm'
+      - name: Install dependencies
+          run: npm ci
+      - name: Lint
+          run: npm run lint
+      - name: Tests
+        run: npm run test:prod
 
+      - name: Replace secret
+        uses: cschleiden/replace-tokens@v1
+        with:
+          tokenPrefix: '{'
+          tokenSuffix: '}'
+          files: 'src/app/environment.prod.ts'
+        env:
+          SECRET_API_KEY: ${{ secrets.API_KEY}}
+      - name: Build
+        run: npm run build:prod
   # Deployment job
   deploy:
     environment:
