@@ -21,7 +21,7 @@ concurrency:
 
 jobs:
   # Build job
-  build-and-deploy-angular:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
