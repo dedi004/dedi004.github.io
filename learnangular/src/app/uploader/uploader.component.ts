@@ -21,6 +21,11 @@ export class UploaderComponent {
     'Check e-mail',
     'Walk dog'
   ];
+  optional = [
+    'Learn guitar',
+    'Invest in Crypto',
+    'Milk that cow'
+  ];
 
   drop(event: CdkDragDrop<string[]>): void {
     if (event.previousContainer === event.container) {

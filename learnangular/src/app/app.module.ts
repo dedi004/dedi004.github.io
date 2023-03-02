@@ -9,6 +9,8 @@ import {ContactComponent} from "./contact/contact.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ContactsComponent} from "./contacts/contacts.component";
 import {OverviewComponent} from "./overview/overview.component";
+import {ContractsComponent} from "./contracts/contracts.component";
+import {UploaderComponent} from "./uploader/uploader.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {OverviewComponent} from "./overview/overview.component";
     ContactComponent,
     ContactComponent,
     ContactsComponent,
-    OverviewComponent
+    OverviewComponent,
+    ContractsComponent,
+    UploaderComponent
   ],
   imports: [
     BrowserModule,
