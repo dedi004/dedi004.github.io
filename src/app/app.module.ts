@@ -11,6 +11,8 @@ import {ContactsComponent} from "./contacts/contacts.component";
 import {OverviewComponent} from "./overview/overview.component";
 import {ContractsComponent} from "./contracts/contracts.component";
 import {UploaderComponent} from "./uploader/uploader.component";
+import {MissionControlComponent} from "./mission-control/mission-control.component";
+import {AstronautComponent} from "./astronaut/astronaut.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {UploaderComponent} from "./uploader/uploader.component";
     ContactsComponent,
     OverviewComponent,
     ContractsComponent,
-    UploaderComponent
+    UploaderComponent,
+    MissionControlComponent,
+    AstronautComponent
   ],
   imports: [
     BrowserModule,
