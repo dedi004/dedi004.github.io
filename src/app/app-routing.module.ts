@@ -4,7 +4,7 @@ import {ContactComponent} from "./contact/contact.component";
 import {ContactsComponent} from "./contacts/contacts.component";
 import {OverviewComponent} from "./overview/overview.component";
 import {ContractsComponent} from "./contracts/contracts.component";
-import {MissionControlComponent} from "./mission-control/mission-control.component";
+import {MissioncontrolComponent} from "./missioncontrol/missioncontrol.component";
 
 const routes: Routes = [
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'missions',
-    component: MissionControlComponent,
+    component: MissioncontrolComponent,
   }
 
 ];
